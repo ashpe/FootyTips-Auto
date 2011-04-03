@@ -1,0 +1,25 @@
+  
+<div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>navbar</h3>
+            <ul class="links">
+              <li><a href="../">back</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="content">
+        
+      <div id="header">
+          <h1> Footytips, current round [5]</h1>
+        </div>
+       
+              /tips here/
+
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,33 @@
+  
+<div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>navbar</h3>
+            <ul class="links">
+              <li><a href="../">back</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="content">
+        
+      <div id="header">
+          <h1> Footytips login </h1>
+        </div>
+       
+          <form method="post">
+
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" /><br />
+
+          <br /><input type="submit" value="login" />
+          </form>
+        </div>
+      </div>
+    </div>

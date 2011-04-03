@@ -1,0 +1,62 @@
+  
+<div id="page">
+      <div id="sidebar">
+        <ul id="sidebar-items">
+          <li>
+            <h3>navbar</h3>
+            <ul class="links">
+              <li><a href="../">back</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+      <div id="content">
+        
+      <div id="header">
+          <h1> Footytips login </h1>
+        </div>
+      
+          [% IF !current_accounts %]
+            <p> You currently have no accounts, create some now! </p>
+          [% ELSE %]
+            <h3>Account summary</h3>
+            <table>
+            <tr><th>Account Login</th><th>Tipping Comp</th><th>Actions</th></tr>
+            [% SET x = 0 %]
+            [% FOREACH account IN current_accounts.2.split(':') %]
+              [% x = x + 1 %]
+              [% IF x == 1 %]
+                [% SET tipping_comp = account %]
+              [% ELSIF x == 3 %]
+                [% x = 0 %]
+              [% ELSE %]
+                <tr><td>[% account %]</td><td>[% tipping_comp  %]</td><td><a href="#">Delete</a> - <a href="#">Edit</a></td></tr>
+              [% END %]
+         
+            [% END %]
+            </table>
+          [% END %]
+
+          <br /><br /><br />
+
+          <form method="post">
+          
+          <select name="comp" id="comp">
+          [% FOREACH option IN options %]
+            <option>[% option %]</option>
+          [% END %]
+          </select><br />
+
+          <label for="login_info">Login:</label>
+          <input type="text" name="login_info" id="login_info" /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" /><br />
+
+          <br /><input type="submit" value="add" />
+          </form>
+        </div>
+      </div>
+    </div>
