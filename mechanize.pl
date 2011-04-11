@@ -34,6 +34,9 @@ foreach (@tmp_content) {
 }
 
 @tmp_content = split "\n", $m->content;
+my $margin = 22;
+my $margin_textfield_name = "Margin";
+
 my @arr = ('collingwood', 'western bulldogs', 'fremantle', 'hawthorn', 'west coast eagles', 'melbourne', 'geelong', 'essendon');
 my $teams = join "|", @arr; 
 my @id_for_tips;
@@ -57,7 +60,7 @@ foreach (@tmp_content) {
     }
 }
 
-
+$m->set_fields($margin_textfield_name => $margin);
 foreach (@id_for_tips) {
     $m->set_fields($_->{name} => $_->{value});
 }
