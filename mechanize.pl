@@ -16,7 +16,7 @@ my $content = $m->content;
 
 $m->submit_form(
     form_number => 1,
-    fields      => { 'userLogin' => 'ashpe', 'userPassword' => 'brodie123' },
+    fields      => { 'userLogin' => 'userloginname', 'userPassword' => 'userpassword' },
 );
 
 die unless $m->success;
