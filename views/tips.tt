@@ -16,10 +16,19 @@
         
       <div id="header">
           <h1> Footytips, current round [5]</h1>
+            
+          <p> /tips here/ </p>  
+            
+          <form method="post">
+          <input type="submit" value="Submit tips" />
+          </form>
+    
+        [% IF msg %]
+            <h3 class="error"> [% msg %] </h3>
+        [% END %]
+
         </div>
        
-              /tips here/
-
         </div>
       </div>
     </div>

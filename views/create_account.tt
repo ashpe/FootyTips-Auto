@@ -17,10 +17,7 @@
       <div id="header">
           <h1> Footytips </h1>
         </div>
-       
-        [% IF msg %]
-          [% msg %]
-        [% ELSE %]
+
           <form method="post">
 
           <label for="username">Username:</label>
@@ -37,6 +34,8 @@
 
           <br /><input type="submit" value="Sign up!" />
           </form>
+        [% IF msg %]
+            <h3 class="error"> [% msg %] </h3>
         [% END %]
         </div>
       </div>

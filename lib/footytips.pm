@@ -1,10 +1,15 @@
 package footytips;
+
 use Dancer ':syntax';
+use Footy::WebService;
 use Template;
 use Dancer::Plugin::Database;
 use Time::Format qw(%time);
+use Data::Dumper;
 
 our $VERSION = '0.1';
+my $service = Footy::WebService->new();
+$service->new_service();
 
 sub connect_db {
     my $dbh = DBI->connect("dbi:SQLite:dbname=footydata", {AutoCommit => 0});
@@ -71,40 +76,24 @@ get '/tipping_accounts' => sub {
 };
 
 get '/tips' => sub {
-  open my $fh, '<', 'public/2011fixture.txt';
-  my $date = $time{'Weekday, Month d'};
-  my $round;
-  foreach (<$fh>) {
-    if (/round/i) {
-      $round = $_;
-      print "$round\n";
+  template 'tips';
+};
+
+post '/tips' => sub {
+    my $login = $service->__autotip('footytips.com.au:ashpe:brodie123');
+
+    if ($login) {
+        template 'tips', {'msg' => "Successfully tipped!"};
+    } else {
+        template 'tips', {'msg' => "Error tipping. try again"};
     }
-
-    if (/$date/) {
-      print "$_\n";
-    } 
-  }
-  
-  print "$date\n";
-  my $all_tips;
-  my $cur_round;
-  template 'tips', {'date' => $date, 'cur_tips' => $all_tips, 'cur_round' => $cur_round};
-
 };
 
 post '/login' => sub {
- my $db = connect_db();
- $db->begin_work();
 
- my $sql = 'select * from users where username=? AND password=?';
- my $sth = $db->prepare($sql);
-
- $sth->execute(params->{'username'}, params->{'password'});
-
- my $user = $sth->fetch;
- $db->commit();
-
- if (!$user) {
+ my $login = $service->__login(params->{'username'}, params->{'password'}); 
+ 
+ if (!$login) {
    template 'login', {'msg' => "Login failed for " . params->{'username'} . " .. " };
  } else {
    session logged_in => 1;
@@ -120,18 +109,9 @@ get '/login' => sub {
 
 post '/create_account' => sub {
   
-  my $db = connect_db();
-  $db->begin_work();
-
-  my $sql = 'insert into users values(?, ?, ?, ?)';
-  my $sth = $db->prepare($sql);
-
-  $sth->execute(params->{'username'}, params->{'password'}, params->{'email'}, '0');
-
-  $db->commit();
-
-  template 'create_account', {'msg' => "Email sent. Confirm your account" };
-
+  my $msg = $service->__create_account(params->{'username'}, params->{'password'}, params->{'email'});
+  
+  template 'create_account', {'msg' => $msg };
 };
 
 get '/create_account' => sub {

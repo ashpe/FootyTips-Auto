@@ -28,6 +28,11 @@
 
           <br /><input type="submit" value="login" />
           </form>
+
+        [% IF msg %]
+            <h3 class="error"> [% msg %] </h3>
+        [% END %]
+
         </div>
       </div>
     </div>
