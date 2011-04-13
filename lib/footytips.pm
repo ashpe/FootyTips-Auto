@@ -78,7 +78,9 @@ get '/tipping_accounts' => sub {
 get '/tips' => sub {
   template 'tips';
 };
-
+get '/test_design' => sub {
+   template 'dev/test.html';
+};
 post '/tips' => sub {
     my $login = $service->__autotip('footytips.com.au:ashpe:brodie123');
 
