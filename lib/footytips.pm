@@ -37,7 +37,7 @@ get '/tipping_accounts' => sub {
   my $rs = $schema->resultset('UserLogin')->search({username => session('username')});
   my $user = $rs->first;
   
-  my $rs = $schema->resultset('TippingGroup')->search({user_id => $user->user_id});
+  $rs = $schema->resultset('TippingGroup')->search({user_id => $user->user_id});
   my %groups;
 
   while (my $group = $rs->next) {
