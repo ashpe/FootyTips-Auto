@@ -22,7 +22,6 @@
           <form method="post">
           tips: <input type="text" size="50" name="tips" /><br />
           margin: <input type="text" size="10" name="margin" /><br />
-          </form>
 
           <br /><br />
 

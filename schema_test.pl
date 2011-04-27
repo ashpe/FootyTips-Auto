@@ -3,6 +3,7 @@
 use Footy::Mechanize;
 use Footy::Schema;
 use Data::Dumper;
+use autodie;
 
 my $database = 'test';
 my $hostname = 'localhost';
@@ -20,9 +21,8 @@ my $schema = get_schema();
 
 my $usr = 'ashpe';
 my $group_name = 'default';
-my $margin = '123';
-my @tips = ['collingwood'];
-
+my $margin = '23';
+my @tips = qw/adelaide/;
 
 
 my $rs = $schema->resultset('UserLogin')->search({username => $usr});
@@ -41,14 +41,14 @@ $rs = $schema->resultset('UserTippingAccount')->search({
     });
 
 while (my $account = $rs->next) {
-      
-       print $account->tipping_password, "\n";
-       print $margin, "\n";
-       print Dumper(@tips);
+       print "username: " . $account->tipping_username, "\n"; 
+       print "password: " . $account->tipping_password, "\n"; 
+       print "margin: " . $margin, "\n"; 
+       print "tips: " . Dumper(\@tips), "\n"; 
        Footy::Mechanize->footytips($account->tipping_username,
                                    $account->tipping_password,
                                    $margin,
-                                   @tips,
+                                   \@tips,
                            );
 }
 

@@ -79,13 +79,13 @@ sub __create_account {
 }
 
 sub __autotip {
-    my ($self, $group_name, $username, $margin, @tips) = @_;
+    my ($self, $group_name, $username, $margin, $tips) = @_;
     
     my $req = RPC::XML::request->new('autotip',
                                     RPC::XML::string->new($group_name),
                                     RPC::XML::string->new($username),
                                     RPC::XML::string->new($margin),
-                                    RPC::XML::array->new(\@tips));
+                                    RPC::XML::string->new($tips));
 
     my $resp = $client->send_request($req);
 

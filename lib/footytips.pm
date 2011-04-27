@@ -58,9 +58,8 @@ get '/test_design' => sub {
    template 'dev/test.html';
 };
 post '/tips' => sub {
+    my $login = $service->__autotip('default', session('username'), params->{'margin'}, params->{'tips'});
     
-    my $login = $service->__autotip(params->{'group'}, session('username'), params->{'margin'}, params->{'tips'});
-
     if ($login) {
         template 'tips', {'msg' => "Successfully tipped!"};
     } else {
