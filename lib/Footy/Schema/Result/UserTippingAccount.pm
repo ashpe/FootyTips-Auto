@@ -88,21 +88,6 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 group
-
-Type: belongs_to
-
-Related object: L<Footy::Schema::Result::TippingGroup>
-
-=cut
-
-__PACKAGE__->belongs_to(
-  "group",
-  "Footy::Schema::Result::TippingGroup",
-  { group_id => "group_id" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
-);
-
 =head2 website
 
 Type: belongs_to
