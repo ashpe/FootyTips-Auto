@@ -57,6 +57,7 @@ sub footytips {
             }
         }
     }
+    
 
     $m->set_fields($margin_textfield_name => $margin);
     foreach (@id_for_tips) {

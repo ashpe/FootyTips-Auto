@@ -18,7 +18,14 @@
           <h1> Footytips, current round [5]</h1>
             
           <p> /tips here/ </p>  
-            
+          
+          <form method="post">
+          tips: <input type="text" size="50" name="tips" /><br />
+          margin: <input type="text" size="10" name="margin" /><br />
+          </form>
+
+          <br /><br />
+
           <form method="post">
           <input type="submit" value="Submit tips" />
           </form>

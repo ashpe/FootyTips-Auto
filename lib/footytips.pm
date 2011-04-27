@@ -6,73 +6,49 @@ use Template;
 use Dancer::Plugin::Database;
 use Time::Format qw(%time);
 use Data::Dumper;
+use Footy::Schema;
 
 our $VERSION = '0.1';
 my $service = Footy::WebService->new();
 $service->new_service();
 
-sub connect_db {
-    my $dbh = DBI->connect("dbi:SQLite:dbname=footydata", {AutoCommit => 0});
-    return $dbh;
+sub get_schema {
+
+  my $database = 'test';
+  my $hostname = 'localhost';
+  my $user = 'root';
+  my $password = 'brodie123';
+  my $schema = Footy::Schema->connect("DBI:mysql:database=$database;host=$hostname", $user, $password);
+  return $schema;
 }
 
 post '/tipping_accounts' => sub {
-
-  open my $fh, '<', 'public/supported_sites.txt';
-  my $sites = <$fh>;
-  my @split_sites = split ':', $sites;
-  
-  my $db = connect_db();
-  $db->begin_work();
-  my $sql = "select * from users_accounts where username=?";
-  my $sth = $db->prepare($sql);
-
-  $sth->execute(session('username'));
-  my $user = $sth->fetch;
-
-  $db->commit();
-  
-  my $login_info = params->{'comp'} . ':' . params->{'login_info'} . ":" . params->{'password'};
- 
-  if (!$user) {
-    $db = connect_db();
-    $db->begin_work();
-    $sql = "insert into users_accounts values(?, ?, ?)";
-    $sth = $db->prepare($sql);
-   
-    $sth->execute(session('username'), 1, $login_info);
-    $db->commit();
-    template 'tipping_accounts', { 'options' => \@split_sites, 'current_accounts' => "blah" };
-  } else {
-    $db = connect_db();
-    $db->begin_work();
-    $sql = "update users_accounts SET account_info=? WHERE username=?";
-
-    $sth = $db->prepare($sql);
-    my $new_login_info = $login_info . ':' . $user->[2];
-
-    $sth->execute($new_login_info, session('username'));
-    $db->commit();
+    
+    my $add_accounts = $service->__add_tipping_account(session('username'), params->{'comp'}, params->{'login_info'}, params->{'password'}, params->{'group'});
+    
     redirect '/tipping_accounts';
-  }
+  
 };
 
 get '/tipping_accounts' => sub {
-  open my $fh, '<', 'public/supported_sites.txt';
-  my $sites = <$fh>;
-  my @split_sites = split ':', $sites;
-  
-  my $db = connect_db();
-  $db->begin_work();
-  my $sql = "select * from users_accounts where username=?";
-  my $sth = $db->prepare($sql);
+  my $schema = get_schema();  
+  my @sites = $schema->resultset('TippingWebsite')->all;
 
-  $sth->execute(session('username'));
-  my $user = $sth->fetch;
-
-  $db->commit();
+  my $rs = $schema->resultset('UserLogin')->search({username => session('username')});
+  my $user = $rs->first;
   
-  template 'tipping_accounts', { 'options' => \@split_sites, 'current_accounts' => $user };
+  my $rs = $schema->resultset('TippingGroup')->search({user_id => $user->user_id});
+  my %groups;
+
+  while (my $group = $rs->next) {
+      if (!exists($groups{$group->group_name})) {
+          $groups{$group->group_name} = $group->group_name;
+      }
+  }
+
+  my @get_accounts = $service->__user_tipping_accounts(session('username'));
+  
+  template 'tipping_accounts', { 'websites' => \@sites, 'groups' => \%groups, 'current_accounts' => @get_accounts };
 };
 
 get '/tips' => sub {
@@ -82,7 +58,8 @@ get '/test_design' => sub {
    template 'dev/test.html';
 };
 post '/tips' => sub {
-    my $login = $service->__autotip('footytips.com.au:ashpe:brodie123');
+    
+    my $login = $service->__autotip(params->{'group'}, session('username'), params->{'margin'}, params->{'tips'});
 
     if ($login) {
         template 'tips', {'msg' => "Successfully tipped!"};
