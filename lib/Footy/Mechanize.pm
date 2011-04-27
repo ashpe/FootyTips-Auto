@@ -9,8 +9,6 @@ sub footytips {
 
     my ($self, $username, $password, $margin, $tips) = @_;
     
-    open (MYFILE, '>>data.txt');
-
     my $margin_textfield_name = "Margin";
     my $url = 'http://www.footytips.com.au';
     my $m = WWW::Mechanize->new();
@@ -29,7 +27,6 @@ sub footytips {
     $url = 'http://www.footytips.com.au/tipping/afl/';
     $m->get($url);
     
-    print MYFILE $m->content;
 
     my @tmp_content = split "\n", $m->content;
 
