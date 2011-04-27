@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS user_login;
 
-CREATE TABLE user_login(user_id INTEGER AUTO_INCREMENT  PRIMARY KEY, username TEXT NOT NULL UNIQUE, password TEXT NOT NULL, email TEXT NOT NULL, status TEXT NOT NULL);
+CREATE TABLE user_login(user_id INTEGER AUTO_INCREMENT  PRIMARY KEY, username varchar(25) NOT NULL UNIQUE, password TEXT NOT NULL, email TEXT NOT NULL, status TEXT NOT NULL);
 
 DROP TABLE IF EXISTS user_tipping_accounts;
 
