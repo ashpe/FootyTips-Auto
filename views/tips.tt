@@ -20,6 +20,12 @@
           <p> /tips here/ </p>  
           
           <form method="post">
+          group:  
+          <select name="group" id="group">
+          [% FOREACH group IN groups.keys %]
+            <option>[% group %]</option>
+          [% END %]
+          </select>
           tips: <input type="text" size="50" name="tips" /><br />
           margin: <input type="text" size="10" name="margin" /><br />
 
