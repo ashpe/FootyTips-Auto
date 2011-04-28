@@ -53,7 +53,7 @@ get '/test_design' => sub {
 
 post '/tips' => sub {
     my $login = $service->__autotip(
-        'default',          session('username'),
+        params->{'group'},  session('username'),
         params->{'margin'}, params->{'tips'}
     );
 
