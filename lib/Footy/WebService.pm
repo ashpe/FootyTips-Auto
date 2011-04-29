@@ -4,6 +4,7 @@ use Moose;
 use Modern::Perl;
 use Data::Dumper;
 use Footy::Mechanize;
+use Footy::Config;
 
 require RPC::XML;
 require RPC::XML::Client;
@@ -14,9 +15,12 @@ our $client;
 sub new_service {
     my ($self) = @_;
 
-    my $proxy = 'http://localhost:4420/';
-    #my $proxy = 'http://203.132.88.127:4420/';
-    #my $proxy = 'https://192.168.0.101:443/';
+    my $conf = Footy::Config->load();
+    my $hostname = $conf->{ws_connect}{hostname};
+    my $port = $conf->{ws_connect}{port};
+
+    my $proxy = "http://$hostname:$port/";
+    
 
     # Environment variables so our SSL URL works with the WebService
     #$ENV{HTTPS_PROXY} = $proxy;
