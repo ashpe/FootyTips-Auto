@@ -33,14 +33,13 @@
           <br /><br /><br />
 
           <form method="post">
-          
           <select name="comp" id="comp">
           [% FOREACH website IN websites %]
-            <option>[% website.website_name %]</option>
+            <option>[% website %]</option>
           [% END %]
           </select>
           <select name="group" id="group">
-          [% FOREACH group IN groups.keys %]
+          [% FOREACH group IN groups %]
             <option>[% group %]</option>
           [% END %]
           </select>

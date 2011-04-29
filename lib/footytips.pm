@@ -17,30 +17,30 @@ post '/tipping_accounts' => sub {
         params->{'login_info'}, params->{'password'},
         params->{'group'}
     );
-
+    
     redirect '/tipping_accounts';
 
 };
 
 get '/tipping_accounts' => sub {
 
-    my @sites = $service->__get_websites();
-    my @groups= $service->__get_groups( session('username') );
+    my $sites = $service->__get_websites();
+    my $groups= $service->__get_groups( session('username') );
 
     my @get_accounts = $service->__user_tipping_accounts( session('username') );
 
     template 'tipping_accounts',
       {
-        'websites'         => \@sites,
-        'groups'           => \@groups,
+        'websites'         => $sites,
+        'groups'           => $groups,
         'current_accounts' => @get_accounts
       };
 };
 
 get '/tips' => sub {
 
-    my @groups = $service->__get_groups( session('username') );
-    template 'tips', { 'groups' => \@groups };
+    my $groups = $service->__get_groups( session('username') );
+    template 'tips', { 'groups' => $groups };
 
 };
 
@@ -51,17 +51,21 @@ get '/test_design' => sub {
 };
 
 post '/tips' => sub {
+    my $groups = $service->__get_groups( session('username') );
     my $login = $service->__autotip(
         params->{'group'},  session('username'),
         params->{'margin'}, params->{'tips'}
     );
-
+	
+    my $msg;
     if ($login) {
-        template 'tips', { 'msg' => "Successfully tipped!" };
+   	$msg = "Successfully tipped!";
     }
     else {
-        template 'tips', { 'msg' => "Error tipping. try again" };
+	$msg = "Tipping failed, try again..";
     }
+
+    template 'tips', { 'groups' => $groups, 'msg' => $msg };
 };
 
 post '/login' => sub {
