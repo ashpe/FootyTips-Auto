@@ -14,8 +14,8 @@ our $client;
 sub new_service {
     my ($self) = @_;
 
-    my $proxy = 'http://203.132.88.127:4420/';
-
+    my $proxy = 'http://192.168.1.176:4420/';
+    #my $proxy = 'http://203.132.88.127:4420/';
     #my $proxy = 'https://192.168.0.101:443/';
 
     # Environment variables so our SSL URL works with the WebService
@@ -81,6 +81,7 @@ sub __get_groups {
         RPC::XML::string->new($username),
       );
     my $resp = $client->send_request($req);
+
     return $resp->value;
 }
 

@@ -3,7 +3,6 @@ package footytips;
 use Dancer ':syntax';
 use Footy::WebService;
 use Template;
-use Dancer::Plugin::Database;
 use Time::Format qw(%time);
 use Data::Dumper;
 
@@ -25,23 +24,23 @@ post '/tipping_accounts' => sub {
 
 get '/tipping_accounts' => sub {
 
-    my @sites = $service->__get_websites() my %groups =
-      $service->__get_groups( session('username') );
+    my @sites = $service->__get_websites();
+    my @groups= $service->__get_groups( session('username') );
 
     my @get_accounts = $service->__user_tipping_accounts( session('username') );
 
     template 'tipping_accounts',
       {
         'websites'         => \@sites,
-        'groups'           => \%groups,
+        'groups'           => \@groups,
         'current_accounts' => @get_accounts
       };
 };
 
 get '/tips' => sub {
 
-    my %groups = $service->__get_groups( session('username') );
-    template 'tips', { 'groups' => \%groups };
+    my @groups = $service->__get_groups( session('username') );
+    template 'tips', { 'groups' => \@groups };
 
 };
 
