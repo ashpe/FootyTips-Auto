@@ -18,5 +18,5 @@ sub load {
 
 
 
-true;
+1;
 
