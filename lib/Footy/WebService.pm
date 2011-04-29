@@ -3,7 +3,6 @@ package Footy::WebService;
 use Moose;
 use Modern::Perl;
 use Data::Dumper;
-use Footy::Mechanize;
 use Footy::Config;
 
 require RPC::XML;
