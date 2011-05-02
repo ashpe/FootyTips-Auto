@@ -1,0 +1,773 @@
+--- 
+1: 
+  - 
+    date: 20110324000000
+    teams: Carlton vs Richmond
+    venue: mcg
+  - 
+    date: 20110325000000
+    teams: Geelong vs St Kilda
+    venue: mcg
+  - 
+    date: 20110326000000
+    teams: Collingwood vs Port Adelaide
+    venue: mcg
+  - 
+    date: 20110326000000
+    teams: Adelaide vs Hawthorn
+    venue: Football Park
+  - 
+    date: 20110326000000
+    teams: Brisbane Lions vs Fremantle
+    venue: gabba
+  - 
+    date: 20110327000000
+    teams: Essendon vs Western Bulldogs
+    venue: gabba
+  - 
+    date: 20110327000000
+    teams: Melbourne vs Sydney
+    venue: mcg
+  - 
+    date: 20110327000000
+    teams: West Coast vs North Melbourne
+    venue: mcg
+10: 
+  - 
+    date: 20110527000000
+    teams: Melbourne vs Carlton
+    venue: mcg
+  - 
+    date: 20110528000000
+    teams: North Melbourne vs Sydney
+    venue: mcg
+  - 
+    date: 20110528000000
+    teams: Fremantle vs St Kilda
+    venue: mcg
+  - 
+    date: 20110528000000
+    teams: Gold Coast vs Geelong
+    venue: mcg
+  - 
+    date: 20110528000000
+    teams: Richmond vs Port Adelaide
+    venue: Marrara Oval
+  - 
+    date: 20110529000000
+    teams: Adelaide vs Brisbane Lions
+    venue: Football Park
+  - 
+    date: 20110529000000
+    teams: Collingwood vs West Coast
+    venue: mcg
+  - 
+    date: 20110529000000
+    teams: Western Bulldogs vs Hawthorn
+    venue: mcg
+11: 
+  - 
+    date: 20110603000000
+    teams: Essendon vs Melbourne
+    venue: mcg
+  - 
+    date: 20110604000000
+    teams: Geelong vs Western Bulldogs
+    venue: Kardinia Park
+  - 
+    date: 20110604000000
+    teams: West Coast vs Gold Coast
+    venue: Kardinia Park
+  - 
+    date: 20110604000000
+    teams: Brisbane Lions vs Sydney
+    venue: gabba
+  - 
+    date: 20110604000000
+    teams: Collingwood vs St Kilda
+    venue: mcg
+  - 
+    date: 20110605000000
+    teams: Hawthorn vs Fremantle
+    venue: mcg
+  - 
+    date: 20110605000000
+    teams: North Melbourne vs Adelaide
+    venue: mcg
+  - 
+    date: 20110605000000
+    teams: Port Adelaide vs Carlton
+    venue: Football Park
+12: 
+  - 
+    date: 20110610000000
+    teams: St Kilda vs Western Bulldogs
+    venue: Football Park
+  - 
+    date: 20110611000000
+    teams: Adelaide vs West Coast
+    venue: Football Park
+  - 
+    date: 20110611000000
+    teams: Gold Coast vs North Melbourne
+    venue: Football Park
+  - 
+    date: 20110611000000
+    teams: Geelong vs Hawthorn
+    venue: mcg
+  - 
+    date: 20110612000000
+    teams: Carlton vs Brisbane Lions
+    venue: mcg
+  - 
+    date: 20110612000000
+    teams: Sydney vs Richmond
+    venue: scg
+  - 
+    date: 20110612000000
+    teams: Fremantle vs Essendon
+    venue: scg
+  - 
+    date: 20110613000000
+    teams: Melbourne vs Collingwood
+    venue: mcg
+13: 
+  - 
+    date: 20110617000000
+    teams: Western Bulldogs vs Adelaide
+    venue: mcg
+  - 
+    date: 20110618000000
+    teams: Hawthorn vs Gold Coast
+    venue: York Park
+  - 
+    date: 20110618000000
+    teams: Essendon vs North Melbourne
+    venue: York Park
+  - 
+    date: 20110618000000
+    teams: Brisbane Lions vs Richmond
+    venue: gabba
+  - 
+    date: 20110618000000
+    teams: St Kilda vs Geelong
+    venue: mcg
+  - 
+    date: 20110619000000
+    teams: Melbourne vs Fremantle
+    venue: mcg
+  - 
+    date: 20110619000000
+    teams: Carlton vs Sydney
+    venue: mcg
+  - 
+    date: 20110619000000
+    teams: West Coast vs Port Adelaide
+    venue: mcg
+14: 
+  - 
+    date: 20110624000000
+    teams: Hawthorn vs Essendon
+    venue: mcg
+  - 
+    date: 20110625000000
+    teams: Gold Coast vs Western Bulldogs
+    venue: mcg
+  - 
+    date: 20110625000000
+    teams: Richmond vs Melbourne
+    venue: mcg
+  - 
+    date: 20110625000000
+    teams: Sydney vs Collingwood
+    venue: Stadium Australia
+  - 
+    date: 20110625000000
+    teams: Fremantle vs Brisbane Lions
+    venue: Stadium Australia
+  - 
+    date: 20110626000000
+    teams: Geelong vs Adelaide
+    venue: Kardinia Park
+  - 
+    date: 20110626000000
+    teams: Carlton vs West Coast
+    venue: Kardinia Park
+  - 
+    date: 20110626000000
+    teams: Port Adelaide vs North Melbourne
+    venue: Football Park
+15: 
+  - 
+    date: 20110701000000
+    teams: Western Bulldogs vs Melbourne
+    venue: Football Park
+  - 
+    date: 20110702000000
+    teams: Richmond vs Carlton
+    venue: mcg
+  - 
+    date: 20110702000000
+    teams: Fremantle vs Gold Coast
+    venue: mcg
+  - 
+    date: 20110702000000
+    teams: Essendon vs Geelong
+    venue: mcg
+  - 
+    date: 20110702000000
+    teams: Adelaide vs Sydney
+    venue: Football Park
+  - 
+    date: 20110703000000
+    teams: Brisbane Lions vs Port Adelaide
+    venue: gabba
+  - 
+    date: 20110703000000
+    teams: Collingwood vs Hawthorn
+    venue: mcg
+  - 
+    date: 20110703000000
+    teams: North Melbourne vs St Kilda
+    venue: mcg
+16: 
+  - 
+    date: 20110708000000
+    teams: West Coast vs Geelong
+    venue: mcg
+  - 
+    date: 20110709000000
+    teams: Hawthorn vs Brisbane Lions
+    venue: York Park
+  - 
+    date: 20110709000000
+    teams: Gold Coast vs Sydney
+    venue: York Park
+  - 
+    date: 20110709000000
+    teams: Essendon vs Richmond
+    venue: mcg
+  - 
+    date: 20110710000000
+    teams: Collingwood vs North Melbourne
+    venue: mcg
+  - 
+    date: 20110710000000
+    teams: Port Adelaide vs St Kilda
+    venue: Football Park
+  - 
+    date: 20110710000000
+    teams: Western Bulldogs vs Carlton
+    venue: Football Park
+17: 
+  - 
+    date: 20110715000000
+    teams: Adelaide vs Essendon
+    venue: Football Park
+  - 
+    date: 20110716000000
+    teams: Richmond vs Gold Coast
+    venue: Cazaly's Stadium
+  - 
+    date: 20110716000000
+    teams: Carlton vs Collingwood
+    venue: mcg
+  - 
+    date: 20110716000000
+    teams: St Kilda vs West Coast
+    venue: mcg
+  - 
+    date: 20110716000000
+    teams: Melbourne vs Port Adelaide
+    venue: Marrara Oval
+  - 
+    date: 20110717000000
+    teams: Sydney vs Fremantle
+    venue: scg
+  - 
+    date: 20110717000000
+    teams: Brisbane Lions vs Geelong
+    venue: gabba
+  - 
+    date: 20110717000000
+    teams: North Melbourne vs Western Bulldogs
+    venue: gabba
+18: 
+  - 
+    date: 20110722000000
+    teams: St Kilda vs Adelaide
+    venue: gabba
+  - 
+    date: 20110723000000
+    teams: North Melbourne vs Brisbane Lions
+    venue: gabba
+  - 
+    date: 20110723000000
+    teams: Sydney vs Western Bulldogs
+    venue: scg
+  - 
+    date: 20110723000000
+    teams: Gold Coast vs Collingwood
+    venue: scg
+  - 
+    date: 20110723000000
+    teams: Essendon vs Carlton
+    venue: mcg
+  - 
+    date: 20110724000000
+    teams: Geelong vs Richmond
+    venue: mcg
+  - 
+    date: 20110724000000
+    teams: Melbourne vs Hawthorn
+    venue: mcg
+  - 
+    date: 20110724000000
+    teams: Fremantle vs West Coast
+    venue: mcg
+19: 
+  - 
+    date: 20110729000000
+    teams: North Melbourne vs Carlton
+    venue: mcg
+  - 
+    date: 20110730000000
+    teams: Western Bulldogs vs West Coast
+    venue: mcg
+  - 
+    date: 20110730000000
+    teams: Geelong vs Melbourne
+    venue: Kardinia Park
+  - 
+    date: 20110730000000
+    teams: Gold Coast vs St Kilda
+    venue: Kardinia Park
+  - 
+    date: 20110730000000
+    teams: Fremantle vs Hawthorn
+    venue: Kardinia Park
+  - 
+    date: 20110731000000
+    teams: Collingwood vs Essendon
+    venue: mcg
+  - 
+    date: 20110731000000
+    teams: Adelaide vs Port Adelaide
+    venue: Football Park
+2: 
+  - 
+    date: 20110401000000
+    teams: St Kilda vs Richmond
+    venue: mcg
+  - 
+    date: 20110402000000
+    teams: North Melbourne vs Collingwood
+    venue: mcg
+  - 
+    date: 20110402000000
+    teams: Port Adelaide vs West Coast
+    venue: Football Park
+  - 
+    date: 20110402000000
+    teams: Fremantle vs Geelong
+    venue: Football Park
+  - 
+    date: 20110402000000
+    teams: Gold Coast vs Carlton
+    venue: gabba
+  - 
+    date: 20110403000000
+    teams: Western Bulldogs vs Brisbane Lions
+    venue: gabba
+  - 
+    date: 20110403000000
+    teams: Sydney vs Essendon
+    venue: Stadium Australia
+  - 
+    date: 20110403000000
+    teams: Hawthorn vs Melbourne
+    venue: mcg
+20: 
+  - 
+    date: 20110805000000
+    teams: St Kilda vs Fremantle
+    venue: Football Park
+  - 
+    date: 20110806000000
+    teams: Carlton vs Melbourne
+    venue: mcg
+  - 
+    date: 20110806000000
+    teams: Geelong vs Gold Coast
+    venue: Kardinia Park
+  - 
+    date: 20110806000000
+    teams: Essendon vs Sydney
+    venue: Kardinia Park
+  - 
+    date: 20110806000000
+    teams: Port Adelaide vs Collingwood
+    venue: Football Park
+  - 
+    date: 20110807000000
+    teams: Brisbane Lions vs Adelaide
+    venue: gabba
+  - 
+    date: 20110807000000
+    teams: Hawthorn vs North Melbourne
+    venue: York Park
+  - 
+    date: 20110807000000
+    teams: West Coast vs Richmond
+    venue: York Park
+21: 
+  - 
+    date: 20110812000000
+    teams: St Kilda vs Collingwood
+    venue: York Park
+  - 
+    date: 20110813000000
+    teams: Hawthorn vs Port Adelaide
+    venue: mcg
+  - 
+    date: 20110813000000
+    teams: Fremantle vs Carlton
+    venue: mcg
+  - 
+    date: 20110813000000
+    teams: Western Bulldogs vs Essendon
+    venue: mcg
+  - 
+    date: 20110813000000
+    teams: Brisbane Lions vs Gold Coast
+    venue: gabba
+  - 
+    date: 20110814000000
+    teams: Melbourne vs West Coast
+    venue: gabba
+  - 
+    date: 20110814000000
+    teams: Richmond vs Sydney
+    venue: mcg
+  - 
+    date: 20110814000000
+    teams: Adelaide vs Geelong
+    venue: Football Park
+22: 
+  - 
+    date: 20110819000000
+    teams: Carlton vs Hawthorn
+    venue: Football Park
+  - 
+    date: 20110820000000
+    teams: Gold Coast vs Adelaide
+    venue: Football Park
+  - 
+    date: 20110820000000
+    teams: West Coast vs Essendon
+    venue: Football Park
+  - 
+    date: 20110820000000
+    teams: North Melbourne vs Fremantle
+    venue: Football Park
+  - 
+    date: 20110820000000
+    teams: Collingwood vs Brisbane Lions
+    venue: mcg
+  - 
+    date: 20110821000000
+    teams: Sydney vs St Kilda
+    venue: Stadium Australia
+  - 
+    date: 20110821000000
+    teams: Port Adelaide vs Western Bulldogs
+    venue: Football Park
+  - 
+    date: 20110821000000
+    teams: Melbourne vs Richmond
+    venue: mcg
+23: 
+  - 
+    date: 20110826000000
+    teams: Fremantle vs Collingwood
+    venue: mcg
+  - 
+    date: 20110827000000
+    teams: Hawthorn vs Western Bulldogs
+    venue: mcg
+  - 
+    date: 20110827000000
+    teams: Geelong vs Sydney
+    venue: Kardinia Park
+  - 
+    date: 20110827000000
+    teams: St Kilda vs North Melbourne
+    venue: Kardinia Park
+  - 
+    date: 20110827000000
+    teams: Brisbane Lions vs West Coast
+    venue: gabba
+  - 
+    date: 20110828000000
+    teams: Adelaide vs Richmond
+    venue: Football Park
+  - 
+    date: 20110828000000
+    teams: Melbourne vs Gold Coast
+    venue: mcg
+  - 
+    date: 20110828000000
+    teams: Essendon vs Port Adelaide
+    venue: mcg
+24: 
+  - 
+    date: 20110902000000
+    teams: Carlton vs St Kilda
+    venue: mcg
+  - 
+    date: 20110902000000
+    teams: Port Adelaide vs Melbourne
+    venue: Football Park
+  - 
+    date: 20110902000000
+    teams: Western Bulldogs vs Fremantle
+    venue: Football Park
+  - 
+    date: 20110902000000
+    teams: Sydney vs Brisbane Lions
+    venue: scg
+  - 
+    date: 20110902000000
+    teams: West Coast vs Adelaide
+    venue: scg
+  - 
+    date: 20110902000000
+    teams: Collingwood vs Geelong
+    venue: mcg
+  - 
+    date: 20110902000000
+    teams: Richmond vs North Melbourne
+    venue: mcg
+  - 
+    date: 20110902000000
+    teams: Gold Coast vs Hawthorn
+    venue: mcg
+3: 
+  - 
+    date: 20110408000000
+    teams: Collingwood vs Carlton
+    venue: mcg
+  - 
+    date: 20110409000000
+    teams: Western Bulldogs vs Gold Coast
+    venue: mcg
+  - 
+    date: 20110409000000
+    teams: Adelaide vs Fremantle
+    venue: Football Park
+  - 
+    date: 20110409000000
+    teams: West Coast vs Sydney
+    venue: Football Park
+  - 
+    date: 20110409000000
+    teams: Richmond vs Hawthorn
+    venue: mcg
+  - 
+    date: 20110410000000
+    teams: Melbourne vs Brisbane Lions
+    venue: mcg
+  - 
+    date: 20110410000000
+    teams: Geelong vs Port Adelaide
+    venue: Kardinia Park
+  - 
+    date: 20110410000000
+    teams: St Kilda vs Essendon
+    venue: Kardinia Park
+4: 
+  - 
+    date: 20110415000000
+    teams: Richmond vs Collingwood
+    venue: mcg
+  - 
+    date: 20110416000000
+    teams: Carlton vs Essendon
+    venue: mcg
+  - 
+    date: 20110416000000
+    teams: Hawthorn vs West Coast
+    venue: York Park
+  - 
+    date: 20110416000000
+    teams: Port Adelaide vs Adelaide
+    venue: Football Park
+  - 
+    date: 20110416000000
+    teams: Sydney vs Geelong
+    venue: scg
+  - 
+    date: 20110417000000
+    teams: Gold Coast vs Melbourne
+    venue: gabba
+  - 
+    date: 20110417000000
+    teams: Fremantle vs North Melbourne
+    venue: gabba
+5: 
+  - 
+    date: 20110421000000
+    teams: Brisbane Lions vs St Kilda
+    venue: gabba
+  - 
+    date: 20110423000000
+    teams: Port Adelaide vs Gold Coast
+    venue: Football Park
+  - 
+    date: 20110423000000
+    teams: Carlton vs Adelaide
+    venue: Football Park
+  - 
+    date: 20110424000000
+    teams: North Melbourne vs Richmond
+    venue: Football Park
+  - 
+    date: 20110425000000
+    teams: Essendon vs Collingwood
+    venue: mcg
+  - 
+    date: 20110425000000
+    teams: Fremantle vs Western Bulldogs
+    venue: mcg
+  - 
+    date: 20110426000000
+    teams: Hawthorn vs Geelong
+    venue: mcg
+6: 
+  - 
+    date: 20110428000000
+    teams: West Coast vs Melbourne
+    venue: mcg
+  - 
+    date: 20110429000000
+    teams: Sydney vs Carlton
+    venue: scg
+  - 
+    date: 20110430000000
+    teams: North Melbourne vs Port Adelaide
+    venue: scg
+  - 
+    date: 20110430000000
+    teams: Adelaide vs St Kilda
+    venue: Football Park
+  - 
+    date: 20110430000000
+    teams: Richmond vs Brisbane Lions
+    venue: mcg
+  - 
+    date: 20110501000000
+    teams: Essendon vs Gold Coast
+    venue: mcg
+  - 
+    date: 20110501000000
+    teams: Collingwood vs Western Bulldogs
+    venue: mcg
+7: 
+  - 
+    date: 20110506000000
+    teams: Port Adelaide vs Hawthorn
+    venue: Football Park
+  - 
+    date: 20110507000000
+    teams: Western Bulldogs vs Sydney
+    venue: Manuka Oval
+  - 
+    date: 20110507000000
+    teams: Geelong vs North Melbourne
+    venue: Kardinia Park
+  - 
+    date: 20110507000000
+    teams: Richmond vs Fremantle
+    venue: mcg
+  - 
+    date: 20110507000000
+    teams: Gold Coast vs Brisbane Lions
+    venue: gabba
+  - 
+    date: 20110508000000
+    teams: Essendon vs West Coast
+    venue: gabba
+  - 
+    date: 20110508000000
+    teams: Melbourne vs Adelaide
+    venue: mcg
+  - 
+    date: 20110509000000
+    teams: St Kilda vs Carlton
+    venue: mcg
+8: 
+  - 
+    date: 20110513000000
+    teams: Geelong vs Collingwood
+    venue: mcg
+  - 
+    date: 20110514000000
+    teams: North Melbourne vs Melbourne
+    venue: mcg
+  - 
+    date: 20110514000000
+    teams: Adelaide vs Gold Coast
+    venue: Football Park
+  - 
+    date: 20110514000000
+    teams: Brisbane Lions vs Essendon
+    venue: gabba
+  - 
+    date: 20110514000000
+    teams: Sydney vs Port Adelaide
+    venue: scg
+  - 
+    date: 20110515000000
+    teams: Hawthorn vs St Kilda
+    venue: mcg
+  - 
+    date: 20110515000000
+    teams: Western Bulldogs vs Richmond
+    venue: mcg
+  - 
+    date: 20110515000000
+    teams: West Coast vs Fremantle
+    venue: mcg
+9: 
+  - 
+    date: 20110520000000
+    teams: Carlton vs Geelong
+    venue: mcg
+  - 
+    date: 20110521000000
+    teams: St Kilda vs Melbourne
+    venue: mcg
+  - 
+    date: 20110521000000
+    teams: Port Adelaide vs Fremantle
+    venue: Football Park
+  - 
+    date: 20110521000000
+    teams: Brisbane Lions vs North Melbourne
+    venue: gabba
+  - 
+    date: 20110521000000
+    teams: Richmond vs Essendon
+    venue: mcg
+  - 
+    date: 20110522000000
+    teams: Collingwood vs Adelaide
+    venue: mcg
+  - 
+    date: 20110522000000
+    teams: Sydney vs Hawthorn
+    venue: scg
+  - 
+    date: 20110522000000
+    teams: West Coast vs Western Bulldogs
+    venue: scg

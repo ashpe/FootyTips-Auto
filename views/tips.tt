@@ -15,10 +15,16 @@
       <div id="content">
         
       <div id="header">
-          <h1> Footytips, current round [5]</h1>
+          <h1> Footytips, current round </h1>
             
-          <p> /tips here/ </p>  
-          
+          [% FOREACH match in current_round %]
+
+            [% match.teams %] @ [% match.venue %] <br />
+
+          [% END %]
+
+          <br />  
+
           <form method="post">
           group:  
           <select name="group" id="group">

@@ -5,6 +5,7 @@ use Footy::WebService;
 use Template;
 use Time::Format qw(%time);
 use Data::Dumper;
+use YAML::XS qw(LoadFile);
 
 our $VERSION = '0.1';
 my $service = Footy::WebService->new();
@@ -38,9 +39,9 @@ get '/tipping_accounts' => sub {
 };
 
 get '/tips' => sub {
-
+    my $current_round = LoadFile('public/fixture_current_round.yaml'); 
     my $groups = $service->__get_groups( session('username') );
-    template 'tips', { 'groups' => $groups };
+    template 'tips', { 'groups' => $groups, 'current_round' => $current_round };
 
 };
 
