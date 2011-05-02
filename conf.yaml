@@ -5,5 +5,3 @@
 ws_connect:
    hostname: 203.132.88.127 
    port: 4420
-get_fixture:
-   url: http://stats.rleague.com/afl/seas/
