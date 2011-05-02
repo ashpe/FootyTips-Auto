@@ -7,7 +7,7 @@ WriteMakefile(
     AUTHOR              => q{YOUR NAME <youremail@example.com>},
     VERSION_FROM        => 'lib/footytips.pm',
     ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
-    ($ExtUtils::MakeMaker::VERSION >= 6.3002
+    ($ExtUtils::MakeMaker::VERSION >= 6
       ? ('LICENSE'=> 'perl')
       : ()),
     PL_FILES            => {},

@@ -9,7 +9,7 @@ use YAML::Syck;
 
 my $conf = Footy::Config->load();
 
-my $url = $conf->{get_fixture}{url};
+my $url = "http://stats.rleague.com/afl/seas/";
 my $year         = $time{'yyyy'};
 my $current_date = $time{'yyyymmddhhmmss'};
 
@@ -84,10 +84,10 @@ foreach (@contents) {
 my $argv = $ARGV[0];
 
 if ($argv =~ /\d+/) {
-    DumpFile("fixture_round_${argv}.yaml", \@{$fixture{$argv}});
+    DumpFile("/home/ashpe/footytips/public/fixture_round_${argv}.yaml", \@{$fixture{$argv}});
 } elsif ($argv eq 'current') {
-    DumpFile("fixture_current_round.yaml", \@{$fixture{$cur_round}});
+    DumpFile("/home/ashpe/footytips/public/fixture_current_round.yaml", \@{$fixture{$cur_round}});
 } else {
-    DumpFile("fixture_${year}.yaml", \%fixture);
+    DumpFile("/home/ashpe/footytips/public/fixture_${year}.yaml", \%fixture);
 }
 
