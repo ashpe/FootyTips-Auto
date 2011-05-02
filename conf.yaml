@@ -5,4 +5,6 @@
 ws_connect:
    hostname: localhost 
    port: 4420
-
+get_fixture:
+   url: http://stats.rleague.com/afl/seas/
+   year: 2011
