@@ -46,6 +46,19 @@ sub __login {
 
 }
 
+sub __add_group {
+    my ( $self, $username, $group_name ) = @_;
+
+    my $req = RPC::XML::request->new(
+        'add_group',
+        RPC::XML::string->new($username),
+        RPC::XML::string->new($group_name),
+    );
+    
+    my $resp = $client->send_request($req);
+    return $resp->value;
+}
+
 sub __add_tipping_account {
 
     my ( $self, $username, $website, $website_username, $website_password,
