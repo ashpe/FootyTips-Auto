@@ -51,6 +51,12 @@ get '/test_design' => sub {
     template 'dev/test.html';
 
 };
+post '/add_group' => sub {
+
+    my $add_group = $service->__add_group( session('username'), params->{'group_name'} );
+    redirect '/tipping_accounts';
+
+}
 
 post '/tips' => sub {
     my $groups = $service->__get_groups( session('username') );
