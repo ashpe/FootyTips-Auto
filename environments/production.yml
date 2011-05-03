@@ -1,4 +1,6 @@
 # configuration file for production environment
+session: "cookie"
+session_cookie_key: "kjsdf07232Gjf0szk+lj12*&(@*jk"
 
 # only log warning and error messsages
 log: "warning"
@@ -10,8 +12,24 @@ logger: "file"
 warnings: 0
 
 # hide errors 
-show_errors: 0
+show_errors: 0 
 
 # cache route resolution for maximum performance
 route_cache: 1
+
+appname: "footytips"
+
+layout: "footytips"
+
+charset: "UTF-8"
+
+template_toolkit: TT
+
+template: "template_toolkit"
+
+engines:
+   template_toolkit:
+      encoding:  'utf8'
+      start_tag: '[%'
+      end_tag:   '%]'
 

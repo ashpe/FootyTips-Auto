@@ -23,9 +23,9 @@ my $teams = join '|',
 
 my $venue_regex = join(
     '|', qw(
-      Cazaly's\sStadium Docklands\sStadium Football\sPark Gabba
+      Cazaly's\sStadium Docklands Football\sPark Gabba
       Gold\sCoast\sStadium Kardinia\sPark Manuka\sOval Marrara\sOval MCG SCG
-      Stadium\sAustralia Subiaco\sOval York\sPark
+      Stadium\sAustralia Subiaco York\sPark
       )
 );
 
@@ -59,10 +59,11 @@ foreach (@contents) {
         }
         else {
             if ( !$last ) {
-                $last = $match . ' vs ';
+                $last = $match;
             }
             else {
-                $fixture{$last_round}[$match_number]{teams} = $last . $match;
+                $fixture{$last_round}[$match_number]{home_team} = $last;
+		$fixture{$last_round}[$match_number]{away_team} = $match;
                 $fixture{$last_round}[$match_number]{date} = $date;
                 $fixture{$last_round}[$match_number]{venue} = $venue;
                 $last                        = undef;
@@ -86,6 +87,7 @@ my $argv = $ARGV[0];
 if ($argv =~ /\d+/) {
     DumpFile("/home/ashpe/footytips/public/fixture_round_${argv}.yaml", \@{$fixture{$argv}});
 } elsif ($argv eq 'current') {
+    $fixture{$cur_round}[0]{margin} = 1;
     DumpFile("/home/ashpe/footytips/public/fixture_current_round.yaml", \@{$fixture{$cur_round}});
 } else {
     DumpFile("/home/ashpe/footytips/public/fixture_${year}.yaml", \%fixture);

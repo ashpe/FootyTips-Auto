@@ -16,11 +16,3 @@ engines:
       start_tag: '[%'
       end_tag:   '%]'
 
-plugin:
-   Database:
-      driver: 'SQLite'
-      database: 'footydata'
-      host: 'localhost'
-      username: ''
-      password: ''
-      connection_check_threshold: 10

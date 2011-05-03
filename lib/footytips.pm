@@ -39,6 +39,7 @@ get '/tipping_accounts' => sub {
 };
 
 get '/tips' => sub {
+
     my $current_round = LoadFile('public/fixture_current_round.yaml'); 
     my $groups = $service->__get_groups( session('username') );
     template 'tips', { 'groups' => $groups, 'current_round' => $current_round };
@@ -53,20 +54,24 @@ get '/test_design' => sub {
 
 post '/tips' => sub {
     my $groups = $service->__get_groups( session('username') );
-    my $login = $service->__autotip(
-        params->{'group'},  session('username'),
-        params->{'margin'}, params->{'tips'}
-    );
-	
-    my $msg;
-    if ($login) {
-   	$msg = "Successfully tipped!";
-    }
-    else {
-	$msg = "Tipping failed, try again..";
-    }
+    my @tips;
 
-    template 'tips', { 'groups' => $groups, 'msg' => $msg };
+    for my $x (0 .. 7) {
+	if (params->{'match' . $x}) {
+		push @tips, params->{'match' . $x};	
+	}
+    }
+	
+    my $tips_string = join "|", @tips;    
+    $tips_string =~ s/sydney/sydney swans/i;
+
+    $service->__autotip(
+        params->{'group'},  session('username'),
+        params->{'margin'}, $tips_string
+    );
+    my $msg = "Tipped successfully."; 
+    my $current_round = LoadFile('public/fixture_current_round.yaml'); 
+    template 'tips', { 'groups' => $groups, 'msg' => $msg, 'current_round' => $current_round };
 };
 
 post '/login' => sub {
