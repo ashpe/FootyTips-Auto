@@ -24,7 +24,7 @@ my $teams = join '|',
 my $venue_regex = join(
     '|', qw(
       Cazaly's\sStadium Docklands Football\sPark Gabba
-      Gold\sCoast\sStadium Kardinia\sPark Manuka\sOval Marrara\sOval MCG SCG
+      Gold\sCoast\sStadium Kardinia\sPark Manuka\sOval Marrara\sOval M\.C\.G\. S\.C\.G\.
       Stadium\sAustralia Subiaco York\sPark
       )
 );
