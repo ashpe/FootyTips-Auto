@@ -43,10 +43,14 @@
 
           <br /><br />
 
-          <form method="post">
           <input type="submit" value="Submit tips" />
           </form>
-    
+           
+          <form method="post">
+              <h3> Add a new group </h3>
+              Group name: <input type="text" name="group_name" />
+          </form>
+
         [% IF msg %]
             <h3 class="error"> [% msg %] </h3>
         [% END %]
