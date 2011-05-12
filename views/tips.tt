@@ -20,7 +20,7 @@
           <form method="post">
           [% USE date = date(format => '%A %b %d', locale => 'en_GB') %] 
 	  [% SET x = 0 %]
-	  [% FOREACH match in current_round.nsort %]
+	  [% FOREACH match in current_round %]
 
 	    [% IF match.date != prev_date %]<b>[% date.format(date.manip.UnixDate(match.date, '%s')) %]</b><br />[% END %]
 

@@ -12,7 +12,10 @@ my $service = Footy::WebService->new();
 $service->new_service();
 
 post '/tipping_accounts' => sub {
-
+    
+    if (params->{'group_name'}) {
+	my $group = $service->__add_group( session('username'), params->{'group_name'} );
+    }
     my $add_accounts = $service->__add_tipping_account(
         session('username'),    params->{'comp'},
         params->{'login_info'}, params->{'password'},
@@ -51,14 +54,16 @@ get '/test_design' => sub {
     template 'dev/test.html';
 
 };
+
 post '/add_group' => sub {
 
     my $add_group = $service->__add_group( session('username'), params->{'group_name'} );
     redirect '/tipping_accounts';
 
-}
+};
 
 post '/tips' => sub {
+
     my $groups = $service->__get_groups( session('username') );
     my @tips;
 

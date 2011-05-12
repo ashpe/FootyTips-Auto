@@ -56,6 +56,7 @@ sub __add_group {
     );
     
     my $resp = $client->send_request($req);
+    
     return $resp->value;
 }
 

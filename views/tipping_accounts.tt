@@ -53,9 +53,10 @@
 
           <br /><input type="submit" value="add" />
           </form>
-          <form method="post" action="/add_group">
+          <form method="post">
               <h3> Add a new group </h3>
               Group name: <input type="text" name="group_name" />
+              <br /><input type="submit" value="add" />
           </form>
         </div>
       </div>

@@ -1,42 +1,42 @@
 --- 
 - 
-  away_team: Hawthorn
-  date: '20110506000000'
-  home_team: Port Adelaide
+  away_team: Collingwood
+  date: '20110513000000'
+  home_team: Geelong
   margin: 1
+  venue: M.C.G.
+- 
+  away_team: Melbourne
+  date: '20110514000000'
+  home_team: North Melbourne
+  venue: docklands
+- 
+  away_team: Gold Coast
+  date: '20110514000000'
+  home_team: Adelaide
   venue: Football Park
 - 
-  away_team: Sydney
-  date: '20110507000000'
-  home_team: Western Bulldogs
-  venue: Manuka Oval
-- 
-  away_team: North Melbourne
-  date: '20110507000000'
-  home_team: Geelong
-  venue: Kardinia Park
-- 
-  away_team: Fremantle
-  date: '20110507000000'
-  home_team: Richmond
-  venue: mcg
-- 
-  away_team: Brisbane Lions
-  date: '20110507000000'
-  home_team: Gold Coast
+  away_team: Essendon
+  date: '20110514000000'
+  home_team: Brisbane Lions
   venue: gabba
 - 
-  away_team: West Coast
-  date: '20110508000000'
-  home_team: Essendon
+  away_team: Port Adelaide
+  date: '20110514000000'
+  home_team: Sydney
+  venue: S.C.G.
+- 
+  away_team: St Kilda
+  date: '20110515000000'
+  home_team: Hawthorn
+  venue: M.C.G.
+- 
+  away_team: Richmond
+  date: '20110515000000'
+  home_team: Western Bulldogs
   venue: docklands
 - 
-  away_team: Adelaide
-  date: '20110508000000'
-  home_team: Melbourne
-  venue: mcg
-- 
-  away_team: Carlton
-  date: '20110509000000'
-  home_team: St Kilda
-  venue: docklands
+  away_team: Fremantle
+  date: '20110515000000'
+  home_team: West Coast
+  venue: subiaco
